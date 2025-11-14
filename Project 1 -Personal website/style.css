@@ -1,125 +1,172 @@
+body {
+    font-family: 'Montserrat', sans-serif; /* Ορίζει τη γραμματοσειρά του σώματος */
+    font-weight: 200; /* Ορίζει το πάχος της γραμματοσειράς */
+    font-size: 16px; /* Ορίζει το μέγεθος της γραμματοσειράς */
+}
+
 body, header {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* ή justify-content: center; */
-}
-
-header {
-    justify-content: center; /* κάθετη στοίχιση στο κέντρο (αν θέλεις όλο το header στο κέντρο της σελίδας) */
-    text-align: center;    /* κεντρική στοίχιση κειμένου */
-}
-
-p {
-    text-align: center;    /* κεντρική στοίχιση για τα spans */
+    align-items: center; /* Κεντράρει τα στοιχεία κάθετα */
+    justify-content: center; /* Κεντράρει τα στοιχεία οριζόντια */
+    text-align: center; /* Κεντράρει το κείμενο */
 }
 
 p span{
-    display: inline-block;
-    background: #ccc;
-    border: 2px solid #888;
-    border-radius: 50%;
-    padding: 8px 16px;
-    margin: 2px;
+    display: inline-block; /* Εμφανίζει το span ως inline-block */
+    background: rgba(244, 244, 244, 0.96); /* Χρώμα φόντου */
+    border: 2px solid #8f7c7c; /* Περίγραμμα */
+    border-radius: 50%; /* Στρογγυλεμένες άκρες */
+    padding: 8px 16px; /* Εσωτερικό περιθώριο */
+    margin: 2px; /* Εξωτερικό περιθώριο */
+    gap: 50px; /* Απόσταση μεταξύ των στοιχείων (δεν έχει αποτέλεσμα εδώ) */
+}
+
+p a{
+    display: inline-block; /* Εμφανίζει το link ως inline-block */
+    background: rgba(244, 244, 244, 0.96); /* Χρώμα φόντου */
+    border: 2px solid #8f7c7c; /* Περίγραμμα */
+    border-radius: 50%; /* Στρογγυλεμένες άκρες */
+    padding: 8px 16px; /* Εσωτερικό περιθώριο */
+    margin: 2px; /* Εξωτερικό περιθώριο */
 }
 
 h1{
-    color: rgb(39, 26, 220);
-    text-align: center;
+    color: rgb(39, 26, 220); /* Χρώμα γραμματοσειράς */
+    text-align: center; /* Κεντράρει το κείμενο */
 }
 
 h1 span{
-    color: red;
-    background: yellow;      /* ή όποιο χρώμα θέλεις */
-    border-radius: 0.3em;    /* ελαφρώς στρογγυλεμένες άκρες */
-    padding: 0 0.3em;
-    text-align: center;
+    color: red; /* Χρώμα γραμματοσειράς */
+    background: yellow; /* Χρώμα φόντου */
+    border-radius: 0.3em; /* Στρογγυλεμένες άκρες */
+    padding: 0 0.3em; /* Εσωτερικό περιθώριο */
+    text-align: center; /* Κεντράρει το κείμενο */
+    margin-top: 0; /* Μηδενίζει το περιθώριο πάνω */
 }
 
-/* Πρόσθεσε αυτό στο style.css */
-.slideshow-container {
-    position: absolute;
-    top: 120px;
-    left: 65vw; /* μετακινεί το carousel δεξιά */
-    width: 600px;
-    height: 350px;
+header {
+    margin-bottom: 20px; /* Περιθώριο κάτω από το header */
 }
 
-.slideshow {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 1;
-    border-radius: 18px;
-    box-shadow: 0 4px 24px #8884;
-    margin-left: 400px;
-    margin-right: 40px;
+/* Container φωτογραφίας και επικεφαλίδας */
+.photo-headline-container {
+    display: flex; /* Εμφανίζει τα στοιχεία σε γραμμή */
+    flex-direction: column; /* Τακτοποιεί τα στοιχεία κάθετα */
+    align-items: center; /* Κεντράρει τα στοιχεία οριζόντια */
+    margin-bottom: 0; /* Μηδενίζει το περιθώριο κάτω */
 }
 
-.slideshow img,
-.slideshow video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    left: 0;
-    top: 0;
+.photo-headline-container {
+    position: relative; /* Θέση σχετική για απολύτως τοποθετημένα στοιχεία */
+    width: 736px; /* Πλάτος container */
+    height: 1000px; /* Ύψος container */
+    margin: 30px auto; /* Περιθώριο πάνω/κάτω και κεντράρισμα */
+    margin-bottom: 0; /* Μηδενίζει το περιθώριο κάτω */
 }
 
-.spans-over {
-    position: absolute;
-    top: 30px;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    z-index: 10;           /* Πάντα πάνω από το carousel */
-    pointer-events: none;  /* Δεν εμποδίζουν το carousel */
+.first-cont {
+    display: flex; /* Εμφανίζει τα στοιχεία σε γραμμή */
+    width: 100%; /* Πλάτος 100% του γονέα */
+    height: 100%; /* Ύψος 100% του γονέα */
 }
 
-.spans-over span {
-    display: inline-block;
-    background: #ccc;
-    border: 2px solid #888;
-    border-radius: 50%;
-    padding: 10px 22px;
-    margin: 2px;
-    opacity: 0.95;
-    font-size: 1.1em;
-    pointer-events: auto;
-    box-shadow: 0 2px 8px #8882;
+.first-cont img {
+    width: 50%; /* Πλάτος κάθε εικόνας */
+    height: 80%; /* Ύψος κάθε εικόνας */
+    object-fit: cover; /* Κόβει/προσαρμόζει την εικόνα */
+    display: block; /* Εμφανίζει ως block */
 }
 
-.slideshow {
-  position: relative;
-  width: 400px;   /* ή όσο θέλεις */
-  height: 250px;
-  margin: 30px auto;
-  overflow: hidden;
+.photo-headline-container h1 {
+    position: absolute; /* Απόλυτη τοποθέτηση */
+    color: #271adc; /* Χρώμα γραμματοσειράς */
+    width: 90%; /* Πλάτος */
+    text-align: center; /* Κεντράρει το κείμενο */
 }
 
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0; top: 0;
-  opacity: 0;
-  animation: fade 9s infinite;
+.h11{
+    bottom: 0px; /* Απόσταση από κάτω */
+    right: 80%; /* Απόσταση από δεξιά */
+    color: #271adc; /* Χρώμα γραμματοσειράς */
+    text-align: center; /* Κεντράρει το κείμενο */
+    margin: 650px auto; /* Περιθώριο πάνω/κάτω και κεντράρισμα */
+    font-size: 2em; /* Μέγεθος γραμματοσειράς */
+    font-weight: bold; /* Έντονη γραφή */
+}
+.h12{
+    bottom: 0px; /* Απόσταση από κάτω */
+    left: 75%; /* Απόσταση από αριστερά */
+    color: #271adc; /* Χρώμα γραμματοσειράς */
+    text-align: center; /* Κεντράρει το κείμενο */
+    margin: 850px auto; /* Περιθώριο πάνω/κάτω και κεντράρισμα */
+    font-size: 2em; /* Μέγεθος γραμματοσειράς */
+    color: #555; /* Χρώμα γραμματοσειράς */
+}
+.second-cont {
+   font-weight: 200; /* Πάχος γραμματοσειράς */
+   background: #ffcc00; /* Χρώμα φόντου */
+   box-sizing: border-box; /* Συμπεριλαμβάνει το padding στο πλάτος */
+   padding: 32px 0 ; /* Εσωτερικό περιθώριο πάνω/κάτω */
+   width: 100%; /* Πλάτος 100% του γονέα */
+   margin-top: 20px; /* Περιθώριο πάνω */
 }
 
-.slide:nth-child(1) { animation-delay: 0s; }
-.slide:nth-child(2) { animation-delay: 3s; }
-.slide:nth-child(3) { animation-delay: 6s; }
-
-@keyframes fade {
-  0%   { opacity: 0; }
-  10%  { opacity: 1; }
-  30%  { opacity: 1; }
-  40%  { opacity: 0; }
-  100% { opacity: 0; }
+.h123{
+    color: red; /* Χρώμα γραμματοσειράς */
+    text-align: center; /* Κεντράρει το κείμενο */
+    font-size: 1.5em; /* Μέγεθος γραμματοσειράς */
+}
+.h124{
+    color: white; /* Χρώμα γραμματοσειράς */
+    text-align: center; /* Κεντράρει το κείμενο */
+    background: blue; /* Χρώμα φόντου */
+    color: #007bff; /* Μπλε χρώμα γραμματοσειράς */
 }
 
-body {
-    font-family: 'Open Sans', 'Momo Trust Sans', Arial, sans-serif;
+.container {
+  display: flex; /* Εμφανίζει τα στοιχεία σε γραμμή */
+  gap: 100px; /* Απόσταση μεταξύ των στοιχείων */
+  display: flex; /* Εμφανίζει τα στοιχεία σε γραμμή (διπλό, μπορείς να αφαιρέσεις το ένα) */
+  justify-content: center; /* Κεντράρει τα στοιχεία οριζόντια */
+  align-items: center; /* Κεντράρει τα στοιχεία κάθετα */
+  height: 150px; /* Ύψος container */
+  margin-top: 20px; /* Περιθώριο πάνω */
 }
 
+.video-box {
+  background: white; /* Χρώμα φόντου */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Σκιά κουτιού */
+  width: 280px; /* Πλάτος κουτιού */
+  text-align: center; /* Κεντράρει το κείμενο */
+  height: 100px; /* Ύψος κουτιού */
+  width: 200px; /* Πλάτος κουτιού (διπλό, μπορείς να αφαιρέσεις το ένα) */
+  padding: 10px; /* Εσωτερικό περιθώριο */
+  border: 1px solid #ccc; /* Περίγραμμα κουτιού */
+  border-radius: 8px; /* Στρογγυλεμένες γωνίες */
+  background: #fafafa; /* Χρώμα φόντου */
+}
+
+.video-box h3 {
+  background: rgb(208, 56, 5); /* Χρώμα φόντου */
+  border-style: double; /* Στυλ περιγράμματος */
+  border-radius: 8px 8px 0 0; /* Στρογγυλεμένες άκρες πάνω */
+  padding: 8px; /* Εσωτερικό περιθώριο */
+  margin: 0; /* Μηδενίζει το περιθώριο */
+  font-size: 1.1em; /* Μέγεθος γραμματοσειράς */
+  color: white; /* Χρώμα γραμματοσειράς */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Σκιά */
+  width: 280px; /* Πλάτος */
+}
+
+.video-box video {
+  width: 300px; /* Πλάτος βίντεο */
+  border-radius: 0 0 8px 8px; /* Στρογγυλεμένες άκρες κάτω */
+  height: 300px; /* Ύψος βίντεο */
+}
+
+/* Στυλ για το footer */
+footer {
+    text-align: center; /* Κεντράρει το κείμενο */
+    margin-top: 40px; /* Περιθώριο πάνω */
+    color: #888; /* Χρώμα γραμματοσειράς */
+    font-size: 0.9em; /* Μέγεθος γραμματοσειράς */
+}
