@@ -1,18 +1,65 @@
+/* Ορισμός custom font */
 @font-face {
-    font-family: "Alumni Sans Pinstripe";
-    src: url('Fonts2/AlumniSansPinstripe-Regular.ttf') format('truetype');
+    font-family: "Alumni Sans Pinstripe"; /* όνομα γραμματοσειράς για χρήση στο site */
+    src: url('Fonts2/AlumniSansPinstripe-Regular.ttf') format('truetype'); /* αρχείο γραμματοσειράς */
 }
+
+/* Βασικό στυλ για όλο το σώμα της σελίδας */
+body {
+    margin: 0; /* αφαιρεί τα default περιθώρια */
+    padding: 0; /* αφαιρεί το default padding */
+}
+
+/* Container της κύριας σελίδας */
 .container{
-    background-color: rgb(225, 213, 213);
-    position: relative;
-    font-family: "Alumni Sans Pinstripe";
-    font-weight: 100;
-    font-style: normal;
+    background-color: rgb(225, 213, 213); /* χρώμα φόντου */
+    position: relative; /* για απόλυτη τοποθέτηση στοιχείων μέσα του */
+    font-family: "Alumni Sans Pinstripe"; /* κληρονομεί τη γραμματοσειρά */
+    font-weight: 100; /* λεπτό βάρος γραμματοσειράς */
+    font-style: normal; /* κανονικό στυλ γραμματοσειράς */
 }
+
+/* Στυλ για το row - μπορεί να χρειαστεί class .row */
+row{
+    background-color: rgb(225, 213, 213);
+}
+
+/* Στυλ για την αρχική ενότητα */
 #home {
     margin-bottom: 0;
     padding-bottom: 0;
 }
+
+/* Κεντραρισμένο navigation */
+nav{
+    text-align: center;
+}
+
+nav ul{
+    list-style: none;   /* αφαιρεί τα bullets */
+    display: flex;      /* τοποθέτηση στοιχείων σε οριζόντια σειρά */
+    justify-content: center; /* κεντράρισμα των στοιχείων */
+    gap: 30px; /* απόσταση μεταξύ των στοιχείων */
+}
+
+nav li a{
+    display: inline-block;      
+    font-size: 24px; 
+    font-weight: bold; 
+    margin: 10px;          
+    padding: 15px 25px;         /* εσωτερικό περιθώριο (padding) */
+    background-color: #b3622c; /* χρώμα φόντου συνδέσμου */
+    text-decoration: none; /* αφαιρεί υπογράμμιση */
+    border-radius: 12px;        /* στρογγυλεμένες γωνίες */
+    transition: background-color 0.3s, transform 0.3s; /* ομαλή μετάβαση σε hover */
+}
+
+.main-nav li a:hover {
+    background-color: #cbc9e8; /* αλλαγή χρώματος όταν ο χρήστης περνάει πάνω από τον σύνδεσμο */
+    transform: scale(1.1);      /* ελαφρύ φούσκωμα */
+}
+
+/* Container για περιεχόμενο πάνω από το hero image */
 .container1{
     width: 700px;
     height: max-content;
@@ -22,28 +69,35 @@
     position: absolute;
     top: 15%;
     left: 32%;
-    opacity: 0.5;
+    opacity: 0.5; /* ημιδιαφάνεια */
     padding: 20px 0;
-    background-color: rgb(134, 105, 105);
+    background-color: rgb(134, 105, 105); /* χρώμα φόντου */
 }
+
 .container1 h3{
-    font-weight: 800;
+    font-weight: 800; /* πιο έντονο βάρος για h3 */
 }
+
 .h3link {
-    color: inherit;
-    text-decoration: none;
+    color: inherit; /* κληρονομεί χρώμα από το γονικό */
+    text-decoration: none; /* χωρίς υπογράμμιση */
 }
+
+/* Γενικό στυλ εικόνων */
 img{
     width: 1000px;
     height: auto;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto; /* κεντράρισμα */
 }
 
+/* Κύρια ενότητα 1 */
 .main1 {
     position: static;
     min-height: 300px; 
 }
+
+/* Wrapper για τα κουτιά με περιεχόμενο */
 .boxes-wrapper {
     position: absolute;
     top: 50%;      
@@ -55,10 +109,11 @@ img{
     align-items: stretch;    
     gap: 100px;
     padding: 10px;
-    border-radius: 10px;
-    border: 4px solid #b3622c;
+    border-radius: 10px; /* στρογγυλεμένες γωνίες */
+    border: 4px solid #b3622c; /* πλαίσιο γύρω από τα κουτιά */
 }
 
+/* Στυλ για το πρώτο κουτί */
 .box1{
     width: 500px;
     height: auto;
@@ -67,6 +122,7 @@ img{
     padding: 50px 0;
     min-width: 300px;
 }
+
 .box1 img {
     width: 350px;
     display: block;
@@ -74,6 +130,13 @@ img{
     border-radius: 10px;
     height: auto;
 }
+
+.box1 h3::before{
+    content: "★ "; /* προσθέτει ένα αστέρι πριν το h3 */
+    color: gold;
+}
+
+/* Στυλ για το δεύτερο κουτί */
 .box2{
     width: 600px;
     height: auto;
@@ -83,6 +146,8 @@ img{
     background-color: #f9f7f5;
     border-radius: 10px;
 }
+
+/* Κοινά χρώματα για containers */
 .container1,
 .main1,
 .box1,
@@ -90,18 +155,22 @@ img{
     background-color: rgb(225, 213, 213);
 }
 
+/* Κύρια ενότητα 2 */
 .main2{
     background-color: #f9f7f5;
     width: 100%;        
     position: relative;
     padding: 5px;
 }
+
 .main2 > div:first-of-type {
     width: 80%;
     margin: 0 auto;
     position: static;
     border-radius: 2px;
 }
+
+/* Wrapper για κουτιά συλλογής έργων */
 .boxes-wrapper2 {
     position: absolute;
     top: 100%;
@@ -110,9 +179,10 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px; /* Space between boxes */
+    gap: 100px; 
 }
 
+/* Στυλ εικόνων στις συλλογές */
 .box7 img,
 .box4 img,
 .box5 img,
@@ -123,7 +193,8 @@ img{
     border-radius: 8px; 
 }
 
-.fouter {
+/* Footer */
+.fouter{
     margin-top: 600px; 
     background: #181818;
     color: #fff;
@@ -137,6 +208,7 @@ img{
     color: #fff;
 }
 
+/* Στυλ για το περιεχόμενο του footer */
 .box-style{
     display: flex;
     align-items: center;
@@ -145,10 +217,12 @@ img{
     color: #fff;
 }
 
+/* Χρώματα για συγκεκριμένα h3 */
 .box2 h3, .container1 h3{
     color: #b3622c;
 }
 
+/* Στυλ για links */
 address a,
 p a,
 a:link,
@@ -159,3 +233,15 @@ a:active {
     text-decoration: none;
 }
 
+/* Στυλ για δεύτερο div μέσα στο box-style */
+.box-style div:second-child {
+    text-indent: 10px;
+}
+
+/* Στυλ για captions κάτω από εικόνες */
+figcaption{
+    font-family: inherit; /* κληρονομεί τη γραμματοσειρά από το γονικό στοιχείο */
+    font-weight: bold;    /* έντονη γραμματοσειρά */
+    font-size: 20px;      /* μέγεθος κειμένου */
+    margin-top: 8px;      /* απόσταση πάνω από το caption */
+}

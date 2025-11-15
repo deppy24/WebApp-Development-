@@ -6,19 +6,26 @@
 
 <title>Artist - Minimal Portofolio</title>
 
-<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> <!-- Responsive design settings -->
 
-<link rel="stylesheet" href="style2.css">
-<link rel="stylesheet" href="Fonts/">
+<link rel="stylesheet" href="style2.css"> <!--Εισαγωγη του εξωτερικου φυλλου css--> 
 
-<!--main css-->
+<!--Κυριο μερος -->
 
 <div class="container">
     <div class="row">
         <section id="home" class="parallax-section">
-            <div>         
+            <div>
+                <nav>
+                    <ul>
+
+                        <li><a href="#myDiv">Work Collection</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
                 <img src="Fonts/home-bg.jpg" alt="About Image">
                     <div class="container1">
+                        <!--Εισαγωγη id για  μεταφορα εντος της σελιδας σε συγκεκρημενο σημειο-->
                         <a href="#myDiv" class="h3link">
                             <h3>Being an artist</h3>
                         </a>
@@ -27,66 +34,76 @@
             </div>
         </section>
     </div>
+    <!--Δευτερο κυριο μερος της σελιδας-->
     <div class="main1">
         <div class="boxes-wrapper">
             <div class="box1">
                 <img src="Fonts/about-image.jpg" alt="Home bg">
                 <h3>Interested to Work?</h3>
-                <h1>Sed varius augue nec pharetra scelerisque. Maecenas sapien ex, rutrum sit amet dapibus eu, tincidunt vitae nulla.</h1>
+                <h1>A balanced routine helps create a smooth and steady flow through the day.</h1>
             </div>
-            <div class="box2">
+            <div id="about" class="box2">
                 <h3>we make things better</h3>
-                <h1>Curabitur tristique ante non malesuada dignissim</h1>
-                <h4>Credit goes to Unsplash for images used in this artist web page. Please tell your friends about Tooplate website. You can feel free to use this template as you wish. Fusce quis fermentum enim, at rutrum enim. Sed tellus metus, laoreet eu turpis vel, sollicitudin feugiat libero. Ut ligula augue, condimentum a purus hendrerit, suscipit vehicula dui. Sed non purus purus. Mauris nunc lectus, porta pellentesque nisl nec, porttitor ultricies purus.</h4>
+                <h1>Progress is not just about elegance, but also about meaningful structure.</h1>
+                <h4>Our studio is built on creativity, collaboration, and dedication. Every project is crafted with attention to detail and inspired by the vibrant cultures of Asia. We believe in meaningful design, honest expression, and visual stories that connect people. Thank you for supporting our work and being part of our artistic journey </br>From traditional influences to modern digital art, we blend technique and imagination to create unique visual experiences. Our team continuously explores new ideas, materials, and creative approaches to deliver work that feels authentic and memorable. We aim to inspire, elevate, and bring artistic vision to life.</h4>
             </div>
         </div>
     </div>
+    <!--Τριτο κυριο μερος σελιδας work collections + φωτογραφιες-->
     <div>
         <div class="main2">
             <div>
                 <h1>Work Collection</h1>
-                <h3>Morbi sit amet erat ullamcorper, varius erat at, vehicula massa. Phasellus vel vestibulum purus. Sed id sollicitudin ex, id eleifend purus. Nulla id fermentum nisl, vel tincidunt orci. Curabitur tristique ante non malesuada dignissim. Pellentesque id odio vitae enim efficitur ornare a non metus.</h3>
+                <h3>Keep balance in your growth, stay flexible, and maintain a clean and functional structure.</h3>
             </div>
             <div id="myDiv" class="boxes-wrapper2">
                 <div class="box4">
+                    <!--Ειααγωγη φωτογραφιων απο τον φακελο που ειναι αποθηκευμενες Fonts/ονομα φωτογραφιας-->
                     <img src="Fonts/work-1.jpg" alt="Gallery Image 1">
-                    <h2>Fine Arts</h2>
+                    <figcaption>Fine Arts</figcaption>
                 </div>
                 <div class="box5">
                     <img src="Fonts/work-2.jpg" alt="Gallery Image 2">
-                    <h2>Logo Design</h2>
+                    <figcaption>Logo Design</figcaption>
                 </div>
                 <div class="box6">
                     <img src="Fonts/work-3.jpg" alt="Gallery Image 3">
-                    <h2>Photography</h2>
+                    <figcaption>Photography</figcaption>
                 </div>
                 <div class="box7">
                     <img src="Fonts/work-4.jpg" alt="Gallery Image 4">
-                    <h2>Cinematography</h2>
+                    <figcaption>Cinematography</figcaption>
                 </div>
             </div>
             </div>
         </div>
     </div>
 </div>
-<div class="fouter">
+<foοter>
+    <!--Το footer της σελιδας-->
+    <div class="fouter">
         <div class="box-style">   
             <div>   
                 <h3>Artist Digital Studio</h3>
-                <h4>Curabitur quis volutpat elit. Proin sed sagittis</br> arcu, non tristique libero. Quisque lobortis nibh eu</br> nisi sodales gravida.</h4>
+                <h4>Designed and developed by an Asian visual artist dedicated to exploring </br>culture, emotion, and modern aesthetics through unique artistic expression.</h4>
+                <p>© 2025 Asia Artist Studio. All rights reserved.</p>
             </div>
-            <div>   
+            <div id="contact">   
                 <h3>Reach Out</h3>
                 <address>
+                    <!--Εισαγωγη λινκ απο χαρτη το οποιο σε μεταβαινει εκει αν τον κλικαρεις-->
                     <a href="https://maps.google.com/?q=123 Main Street, City">
                         123 Main Street, City 12345
                     </a>
                 </address>
                 <h3>Contact Info</h3>
+                <!--Εισαγωγη τηλεφωνου με το καταλληλο element ωστε να μπορεις να πραγματοποιησεις κληση οταν το κλικαρεις εαν υποστηριζεται απο τη συσκευη-->
                 <p><strong>Phone:</strong> <a href="tel:+1234567890">+1 234 567 890</a></p>
+                
             </div>
-        </div>                      
-</div>
+        </div> 
+    </div>                    
+ </foοter>
 
 
 </head>

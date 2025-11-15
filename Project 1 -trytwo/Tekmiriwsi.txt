@@ -8,13 +8,72 @@
 3.Θα πρέπει να διαθέτει footer όπου θα αναφέρονται τα στοιχεία του συντάκτη του εγγράφου
 72-89                        <div class="fouter">
 4.Θα πρέπει να υποστηρίζει «single page navigation»
- 22                       <a href="#myDiv" class="h3link">
+ 18                                      <nav>
+                    <ul>
+
+                        <li><a href="#myDiv">Work Collection</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+5.Η ιστοσελίδα που θα παραδώσετε θα πρέπει να αποτελείται από ένα αρχείο .html και ένα αρχείο .css
+    index2.html , style2.css
+
 
 
  Μη Λειτουργικες
  ----------------------
  1.Η εμφάνιση του περιεχομένου θα πρέπει να αποδίδεται μέσω φύλλων CSS
   11                 <link rel="stylesheet" href="style2.css">
- 2.
+ 2.Θα πρέπει να κάνετε χρήση Google fonts
+             @font-face {
+                font-family: "Alumni Sans Pinstripe";
+                    src: url('Fonts2/AlumniSansPinstripe-Regular.ttf') format('truetype');
+                    }
+3.Οι εικόνες και τα φύλλα CSS θα πρέπει να βρίσκονται σε ξεχωριστούς υποκαταλόγους κάτω από τον κατάλογο
+που βρίσκεται το HTML έγγραφο.
+        Project 1 -trytwo\Fonts
+4.Θα πρέπει να επιδείξετε την χρήση μορφοποίησης κειμένου με CSS
+  162       .box-style div:second-child {
+            text-indent: 10px;}
+5.Θα πρέπει να επιδείξετε την χρήση επιλογέα κλάσης.
+ 36            .main1 {
+                position: static;
+                min-height: 300px; 
+            }
+6.Θα πρέπει να επιδείξετε την χρήση επιλογέα απογόνου
+ 162           .box-style div:second-child
+7.Θα πρέπει να επιδείξετε την χρήση επιλογέα ταυτότητας
+ 12               #home {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                    }
+8.Θα πρέπει να επιδείξετε την χρήση μίας τουλάχιστον ψευδοκλάσης ή ψευδοστοιχείου
+ 157               a:active {
+                    color: inherit;
+                    text-decoration: none;
+                }
+9.Θα πρέπει να επιδείξετε την χρήση επιλογέα ιδιότητας. 
+--
+10.Θα πρέπει να χρησιμοποιήσετε το μοντέλο κουτιού στην απόδοση στυλ (box model).
+ 37           .box2{
+                width: 600px;
+                height: auto;
+                margin: 0 ;
+                text-align: center;
+                padding: 50px 0;
+                background-color: #f9f7f5;
+                border-radius: 10px;
+                }
+11.Θα πρέπει να προσθέσετε σύντομα σχόλια στο φύλλο css.
+ 85                               <!--Εισαγωγη λινκ απο χαρτη το οποιο σε μεταβαινει εκει αν τον κλικαρεις-->
+12.Θα πρέπει να επιδείξετε την χρήση διατεταγμένης ή μη διατεταγμένης λίστας.
+  18                              <nav>
+                    <ul>
 
-
+                        <li><a href="#myDiv">Work Collection</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
