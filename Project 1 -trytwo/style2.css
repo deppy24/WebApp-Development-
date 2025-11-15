@@ -1,6 +1,13 @@
+@font-face {
+    font-family: "Alumni Sans Pinstripe";
+    src: url('Fonts2/AlumniSansPinstripe-Regular.ttf') format('truetype');
+}
 .container{
     background-color: rgb(225, 213, 213);
     position: relative;
+    font-family: "Alumni Sans Pinstripe";
+    font-weight: 100;
+    font-style: normal;
 }
 #home {
     margin-bottom: 0;
@@ -19,7 +26,13 @@
     padding: 20px 0;
     background-color: rgb(134, 105, 105);
 }
-
+.container1 h3{
+    font-weight: 800;
+}
+.h3link {
+    color: inherit;
+    text-decoration: none;
+}
 img{
     width: 1000px;
     height: auto;
@@ -131,3 +144,18 @@ img{
     background: #333;
     color: #fff;
 }
+
+.box2 h3, .container1 h3{
+    color: #b3622c;
+}
+
+address a,
+p a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
