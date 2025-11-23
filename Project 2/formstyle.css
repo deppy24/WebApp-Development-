@@ -1,0 +1,120 @@
+body{
+    background-color:rgb(225, 213, 213) ;
+}
+
+.main div:first-of-type{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    transform: scale(0.5); /* Make it smaller by 10% */
+    transition: transform 0.3s ease, width 0.3s ease; /* Smooth transition */
+}
+
+.main div:first-of-type:hover{
+    transform: scale(1.1); /* Grow the container to 110% of its original size */
+    width: 370px; /* Slightly increase width on hover */
+}
+
+table {
+    border-radius: 10px; 
+    border: 4px solid #b3622c; 
+    padding: 10px;
+}
+
+table td{
+    text-align: center;
+    vertical-align: center;;
+}
+
+table tr{
+    margin-bottom: 10px;
+}
+
+.spacer td{
+    font-weight: bold;
+}
+
+tr:not(.spacer) td{
+    width: 200px;
+    padding: 8px; /* Add some padding inside the td */
+    border: 1px solid #ccc; /* Border like an input field */
+    border-radius: 5px; /* Round corners */
+    background-color: #fff; /* White background */
+    color: #333; /* Dark text color */
+    font-size: 16px; /* Font size similar to an input */
+    text-align: center; /* Center align text (optional, depending on content) */
+}
+
+div form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 10px;  
+    justify-content: center; /*Οριζοντιο κεντραρισμα*/
+    align-items: center;   /*Καθετο κεντραρισμα*/
+    border-radius: 10px; /* στρογγυλεμένες γωνίες */
+    border: 4px solid #b3622c; /* πλαίσιο γύρω από τα κουτιά */
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+form input,textarea {
+    width: 80%;
+    height: 30px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    margin-top: 30px;
+    width: 50%;
+    padding: 10px;
+    background-color: #b3622c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container{
+    position: absolute;
+    left: 40%;
+    top: 0%;
+}
+
+/* Εφέ Focus για τα πεδία εισόδου */
+form input:focus, form textarea:focus {
+    border: 2px solid #b3622c; /* Αλλαγή χρώματος του πλαισίου όταν το πεδίο έχει focus */
+    box-shadow: 0 0 8px rgba(179, 98, 44, 0.5); /* Ελαφριά σκιά γύρω από το πεδίο */
+    outline: none; /* Αφαιρούμε το προεπιλεγμένο περίγραμμα */
+    transition: border 0.3s, box-shadow 0.3s ease; /* Ομαλή μετάβαση για το περίγραμμα και τη σκιά */
+}
+
+/* Εφέ όταν ο χρήστης τοποθετεί τον δείκτη πάνω στο κουμπί */
+form button:hover {
+    background-color: #a4511d; /* Αλλαγή χρώματος φόντου */
+    transform: scale(1.1); /* Μεγέθυνση του κουμπιού */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Προσθήκη σκιάς για βάθος */
+}
+
+/* Media Query για μικρές οθόνες (κινητά) */
+@media (max-width: 600px) {
+    div form {
+        flex-direction: column; /* Και πάλι κάθετα τα πεδία */
+        width: 90%; /* Τα πεδία καλύπτουν το 90% του πλάτους της οθόνης */
+    }
+
+    form input, form textarea, form button {
+        width: 100%; /* Πλάτος 100% για όλα τα πεδία */
+    }
+
+    form button {
+        font-size: 14px; /* Μικρότερη γραμματοσειρά για το κουμπί */
+    }
+}
+
