@@ -1,5 +1,11 @@
+@font-face {
+    font-family: "Alumni Sans Pinstripe"; /* όνομα γραμματοσειράς για χρήση στο site */
+    src: url('/Project 2/Modification Project 1 - One page/Fonts2/AlumniSansPinstripe-Italic.ttf') format('truetype'); /* αρχείο γραμματοσειράς */
+}
+
 body{
     background-color:rgb(225, 213, 213) ;
+    font-family: "Alumni Sans Pinstripe";
 }
 
 .main div:first-of-type{
