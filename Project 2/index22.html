@@ -15,9 +15,9 @@
 <div>
     <div class="main">
         <div><!--Δημιουργια πινακα για προτυπο συμπληρωσης φορμας επικοινωνιας-->
-            <h1>
+            <caption>
                 Template
-                </h1>
+            </caption>
             <table> 
                 <tr class="spacer">
                     <td>Name</td>
@@ -54,22 +54,27 @@
         <div class="form-container">
             <h1>Get in touch</h1>
             <form>
-                <label>Name</label>
-                <input type="text" placeholder="Your Name" required>
-                <label>Surname</label>
-                <input type="text" placeholder="Your Surname" required>
-                <label>Email</label>
-                <input type="email" placeholder="Your Email" required>
-                <label>Phone number</label>
-                <input type="tel" placeholder="Your Phone number" required>
-                <label>Message</label>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Submit</button>
+                <fieldset>
+                    <legend>Personal info</legend>
+                    <label for="Name">Name</label>
+                    <input type="text" id="Name" name="Name" placeholder="Your Name" required>
+                    <label for="Surname">Surname</label>
+                    <input type="text" id="Surname" name="Surname" placeholder="Your Surname" required>
+                    <label for="Email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Contact details</legend>
+                    <label for="Phone number">Phone number</label>
+                    <input type="tel" id="Phone number" name="Phone number" placeholder="Your Phone number" required>
+                    <label for="Message">Message</label>
+                    <textarea placeholder="Your Message" id="Message" name="Message" required></textarea>
+                </fieldset>
+                <button type="submit" aria-label="Submit the form">Submit</button>
             </form>  
         </div>
         
     </div>
 </div>
-
 
 </head>

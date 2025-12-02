@@ -1,81 +1,122 @@
 @font-face {
-    font-family: "Alumni Sans Pinstripe"; /* όνομα γραμματοσειράς για χρήση στο site */
-    src: url('/Project 2/Modification Project 1 - One page/Fonts2/AlumniSansPinstripe-Italic.ttf') format('truetype'); /* αρχείο γραμματοσειράς */
+    font-family: "Alumni Sans Pinstripe";
+    src: url('/Project 2/Modification Project 1 - One page/Fonts2/AlumniSansPinstripe-Italic.ttf') format('truetype');
 }
 
-body{
-    background-color:rgb(225, 213, 213) ;
+body {
+    background-color: rgb(225, 213, 213);
     font-family: "Alumni Sans Pinstripe";
 }
 
-.main div:first-of-type{
+/* Ορισμός του κύριου container για το form */
+.main div:first-of-type {
     position: absolute;
     top: 20%;
     left: 10%;
-    transform: scale(0.5); /* Make it smaller by 10% */
-    transition: transform 0.3s ease, width 0.3s ease; /* Smooth transition */
+    transform: scale(0.5); /* Μειώνουμε το μέγεθος της φόρμας */
+    transition: transform 0.3s ease, width 0.3s ease;
 }
 
-.main div:first-of-type:hover{
-    transform: scale(1.1); /* Grow the container to 110% of its original size */
-    width: 370px; /* Slightly increase width on hover */
+.main div:first-of-type:hover {
+    transform: scale(1.1); /* Μεγαλώνουμε την φόρμα κατά 10% */
+    width: 370px;
 }
 
 table {
-    border-radius: 10px; 
-    border: 4px solid #b3622c; 
+    border-radius: 10px;
+    border: 4px solid #b3622c;
     padding: 10px;
 }
 
-table td{
+table td {
     text-align: center;
-    vertical-align: center;;
+    vertical-align: center;
 }
 
-table tr{
+table tr {
     margin-bottom: 10px;
 }
 
-.spacer td{
+.spacer td {
     font-weight: bold;
 }
 
-tr:not(.spacer) td{
+tr:not(.spacer) td {
     width: 200px;
-    padding: 8px; /* Add some padding inside the td */
-    border: 1px solid #ccc; /* Border like an input field */
-    border-radius: 5px; /* Round corners */
-    background-color: #fff; /* White background */
-    color: #333; /* Dark text color */
-    font-size: 16px; /* Font size similar to an input */
-    text-align: center; /* Center align text (optional, depending on content) */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    text-align: center;
 }
 
-div form {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    gap: 10px;  
-    justify-content: center; /*Οριζοντιο κεντραρισμα*/
-    align-items: center;   /*Καθετο κεντραρισμα*/
-    border-radius: 10px; /* στρογγυλεμένες γωνίες */
-    border: 4px solid #b3622c; /* πλαίσιο γύρω από τα κουτιά */
+/* Στυλ για το form */
+.form-container {
+    position: absolute;
+    left: 40%;
+    top: 0%;
 }
 
-form label {
-    margin-top: 10px;
+
+
+/* Στυλ για τα fieldsets */
+fieldset {
+    border: 2px solid #b3622c; /* Το περίγραμμα για το fieldset */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 5px 0; /* Αυξημένο περιθώριο πάνω και κάτω */
+    width: 500px; /* Αυξημένο πλάτος για μεγαλύτερη φόρμα */
+    background-color: #fff;
+    width: 100%;    /* now takes full width minus form padding */
+    box-sizing: border-box; /* include borders/padding in width */
+}
+
+/* Στυλ για το legend */
+legend {
     font-weight: bold;
     font-size: 18px;
+    color: #b3622c;
 }
 
-form input,textarea {
-    width: 80%;
-    height: 30px;
+/* Στυλ για τη φόρμα */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 500px; /* Αυξημένο πλάτος */
+    gap: 10px; /* Μεγαλύτερο κενό μεταξύ των πεδίων */
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 4px solid #b3622c;
+    padding: 20px;
+}
+
+/* Στυλ για τα labels */
+form label {
+    margin-bottom: 8px; /* Κενό κάτω από το label */
+    font-weight: bold;
+    font-size: 18px;
+    display: block; /* Κάνει το label block level στοιχείο */
+}
+
+/* Στυλ για τα input και textarea */
+form input, form textarea {
+    width: 100%; /* Καλύπτει όλο το πλάτος του πεδίου */
+    height: 20px; /* Αυξάνουμε το ύψος των πεδίων */
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    font-size: 12px;
 }
 
+label{
+    text-align: center;
+}
+
+
+/* Στυλ για το κουμπί υποβολής */
 form button {
     margin-top: 30px;
     width: 50%;
@@ -87,40 +128,39 @@ form button {
     cursor: pointer;
 }
 
-.form-container{
-    position: absolute;
-    left: 40%;
-    top: 0%;
-}
-
-/* Εφέ Focus για τα πεδία εισόδου */
+/* Εφέ όταν ο χρήστης κάνει focus στο πεδίο */
 form input:focus, form textarea:focus {
-    border: 2px solid #b3622c; /* Αλλαγή χρώματος του πλαισίου όταν το πεδίο έχει focus */
-    box-shadow: 0 0 8px rgba(179, 98, 44, 0.5); /* Ελαφριά σκιά γύρω από το πεδίο */
-    outline: none; /* Αφαιρούμε το προεπιλεγμένο περίγραμμα */
-    transition: border 0.3s, box-shadow 0.3s ease; /* Ομαλή μετάβαση για το περίγραμμα και τη σκιά */
+    border: 2px solid #b3622c;
+    box-shadow: 0 0 8px rgba(179, 98, 44, 0.5);
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s ease;
 }
 
 /* Εφέ όταν ο χρήστης τοποθετεί τον δείκτη πάνω στο κουμπί */
 form button:hover {
-    background-color: #a4511d; /* Αλλαγή χρώματος φόντου */
-    transform: scale(1.1); /* Μεγέθυνση του κουμπιού */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Προσθήκη σκιάς για βάθος */
+    background-color: #a4511d;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Media Query για μικρές οθόνες (κινητά) */
 @media (max-width: 600px) {
-    div form {
-        flex-direction: column; /* Και πάλι κάθετα τα πεδία */
-        width: 90%; /* Τα πεδία καλύπτουν το 90% του πλάτους της οθόνης */
+    .form-container {
+        position: relative;
+        left: 10%;
+        top: 0;
+        width: 90%; /* Η φόρμα καλύπτει το 90% της οθόνης */
+    }
+
+    form {
+        width: 100%; /* Τα πεδία καλύπτουν το 100% του πλάτους */
     }
 
     form input, form textarea, form button {
-        width: 100%; /* Πλάτος 100% για όλα τα πεδία */
+        width: 100%; /* Κάνουμε τα πεδία 100% του πλάτους της οθόνης */
     }
 
     form button {
         font-size: 14px; /* Μικρότερη γραμματοσειρά για το κουμπί */
     }
 }
-
